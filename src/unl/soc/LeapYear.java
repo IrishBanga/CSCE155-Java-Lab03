@@ -8,6 +8,11 @@ public class LeapYear {
 
 	public static void main(String args[]) {
 
+		boolean reportPass = false;
+		if (args.length > 0 && args[0].equals("-reportPass")) {
+			reportPass = true;
+		}
+
 		int year;
 		int numPassed = 0;
 		int numFailed = 0;
@@ -55,6 +60,11 @@ public class LeapYear {
 		System.out.printf("Number of test cases failed: %d\n", numFailed);
 		System.out.printf("Percentage Passed: %.2f%%\n", (double) numPassed / (numPassed + numFailed) * 100.0);
 
+		if (reportPass) {
+			System.exit(numPassed);
+		} else {
+			System.exit(numFailed);
+		}
 	}
 
 	/**
