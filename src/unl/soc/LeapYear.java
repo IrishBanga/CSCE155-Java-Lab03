@@ -51,7 +51,7 @@ public class LeapYear {
 			numPassed = numPassed + 1;
 		}
 
-		// TODO: write *exactly* 3 more of your own
+		// TODO: write at least 3 more of your own
 		// test cases here, they should all pass!
 
 		System.out.printf("\n\n");
