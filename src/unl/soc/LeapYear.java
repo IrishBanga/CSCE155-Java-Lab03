@@ -51,8 +51,37 @@ public class LeapYear {
 			numPassed = numPassed + 1;
 		}
 
+		
 		// TODO: write at least 3 more of your own
 		// test cases here, they should all pass!
+		
+		year = 2024;
+		System.out.printf("Test Case 4: year = %d: ", year);
+		if (!isLeapYear(year)) {
+			System.out.printf("FAILED!\n");
+			numFailed = numFailed + 1;
+		} else {
+			System.out.printf("PASSED!\n");
+			numPassed = numPassed + 1;
+		}
+		year = 2400;
+		System.out.printf("Test Case 5: year = %d: ", year);
+		if (!isLeapYear(year)) {
+			System.out.printf("FAILED!\n");
+			numFailed = numFailed + 1;
+		} else {
+			System.out.printf("PASSED!\n");
+			numPassed = numPassed + 1;
+		}
+		year = 2500;
+		System.out.printf("Test Case 6: year = %d: ", year);
+		if (isLeapYear(year)) {
+			System.out.printf("FAILED!\n");
+			numFailed = numFailed + 1;
+		} else {
+			System.out.printf("PASSED!\n");
+			numPassed = numPassed + 1;
+		}
 
 		System.out.printf("\n\n");
 		System.out.printf("Summary:\n");
@@ -76,6 +105,7 @@ public class LeapYear {
 		// The year is stored in the variable year
 		// Your function should return true if it represents a leap year
 		// and false if it does not.
+		return (year%4==0)?((year%100==0)?((year%400==0)?true:false):true):false;
 	}
 
 }
